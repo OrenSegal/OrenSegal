@@ -10,7 +10,9 @@ Pre-launch, so the architecture diagram stays private for now — ask me if you 
 
 **Before this:** five years as a senior data analyst at a major TV network, building the pipelines and forecasting models the business actually ran on. One pricing model paid for itself several times over. One forecasting model earned enough trust to inform real greenlight decisions.
 
-**Stack I live in:** Swift/SwiftUI, TypeScript, Python, agentic orchestration (LangChain/LangGraph), RAG and vector search, Postgres, Docker, and whatever cloud is having a good day.
+**Stack I live in:** Swift/SwiftUI, TypeScript, Python, agentic systems and multi-model orchestration, RAG and vector search, Postgres, Docker, and whatever cloud is having a good day.
+
+**Public proof, since most of the real work is still private:** [`architecture-lint`](https://github.com/OrenSegal/architecture-lint) — a config-driven module-boundary linter with a ratchet baseline, tested and CI-gated. [`metropulse-nyc`](https://github.com/OrenSegal/metropulse-nyc) — a Dagster/DuckDB pipeline segmenting NYC subway stations by behavior, ~6ms query latency over 73K ridership rows.
 
 <details>
 <summary>A fact that has nothing to do with any of this</summary>
