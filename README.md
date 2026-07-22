@@ -4,9 +4,9 @@
 
 Founder and engineer. I take AI systems from "cool demo" to something that survives production traffic, edge cases, and real users who don't read the happy path.
 
-**Currently building: [Shelfie](https://shelfie.food)** — an AI-native Kitchen OS. Point your camera at your fridge or pantry, it identifies what you actually have, and turns that into recipes, a grocery list, and a plan — no manual entry. Native Swift 6 / SwiftUI on the front end, a fleet of agentic services underneath handling computer vision, retrieval, and recipe intelligence, on infrastructure I designed and run end to end.
+**Currently building: [Shelfie](https://shelfie.food)** - an AI-native Kitchen OS. Point your camera at your fridge or pantry, it identifies what you actually have, and turns that into recipes, a grocery list, and a plan - no manual entry. Native Swift 6 / SwiftUI on the front end, a fleet of agentic services underneath handling computer vision, retrieval, and recipe intelligence, on infrastructure I designed and run end to end.
 
-Pre-launch, so the architecture diagram stays private for now — ask me if you want the real version.
+Pre-launch, so the architecture diagram stays private for now - ask me if you want the real version.
 
 **Before this:** five years as a senior data analyst at a major TV network, building the pipelines and forecasting models the business actually ran on. One pricing model paid for itself several times over. One forecasting model earned enough trust to inform real greenlight decisions.
 
