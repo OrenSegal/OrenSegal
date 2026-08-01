@@ -12,7 +12,7 @@ Pre-launch, so the architecture diagram stays private for now - ask me if you wa
 
 **Stack I live in:** Swift/SwiftUI, TypeScript, Python, agentic systems and multi-model orchestration, RAG and vector search, Postgres, Docker, and whatever cloud is having a good day.
 
-**Public proof, since most of the real work is still private:** [`architecture-lint`](https://github.com/OrenSegal/architecture-lint) — a config-driven module-boundary linter with a ratchet baseline, tested and CI-gated. [`metropulse-nyc`](https://github.com/OrenSegal/metropulse-nyc) — a Dagster/DuckDB pipeline segmenting NYC subway stations by behavior, ~6ms query latency over 73K ridership rows.
+**Public proof, since most of the real work is still private:** [`signal-scout`](https://github.com/OrenSegal/signal-scout) — a Claude Code agent skill that turns a startup URL into an evidence-backed prospect shortlist, and re-fetches every cited source to catch fabricated claims before they ship, instead of trusting the same model's self-graded confidence. [`architecture-lint`](https://github.com/OrenSegal/architecture-lint) — a config-driven module-boundary linter with a ratchet baseline, tested and CI-gated. [`metropulse-nyc`](https://github.com/OrenSegal/metropulse-nyc) — a Dagster/DuckDB pipeline segmenting NYC subway stations by behavior, ~6ms query latency over 73K ridership rows.
 
 <details>
 <summary>A fact that has nothing to do with any of this</summary>
