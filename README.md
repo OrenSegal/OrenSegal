@@ -17,7 +17,7 @@ Pre-launch, so the architecture diagram stays private for now - ask me if you wa
 <details>
 <summary>A fact that has nothing to do with any of this</summary>
 <br>
-Moved to the US in 2023, spent a year deliberately retraining in AI/ML before writing a line of Shelfie's code. Would make that trade again in a heartbeat.
+Moved to the US in 2023, spent a year deliberately retraining in AI/ML before writing a line of Shelfie's code. Would make that trade again in a heartbeat. Some of that retraining is public: <a href="https://github.com/OrenSegal/coursera-deep-learning-specialization">deeplearning.ai's Deep Learning Specialization</a> (notes + assignments across all five courses), and <a href="https://github.com/OrenSegal/rag-generation">a completed RAG lab</a> — embeddings, an in-memory Qdrant index, and real semantic search over a wine dataset.
 </details>
 
 Most of the real work lives in private repos right now. The commit graph is real — the code just isn't public yet.
