@@ -26,11 +26,11 @@ Shelfie is in TestFlight beta, so the architecture diagram stays private for now
 <!-- recent starts -->
 **Releases**
 
+- [signal-skills v1.0.1](https://github.com/OrenSegal/signal-skills/releases/tag/v1.0.1) (2026-09-28)
 - [llm-gateway-kit v0.1.0](https://github.com/OrenSegal/llm-gateway-kit/releases/tag/v0.1.0) (2026-09-28)
 - [litmus v0.1.0](https://github.com/OrenSegal/litmus/releases/tag/v0.1.0) (2026-09-28)
 - [verify-before-ship v0.1.0](https://github.com/OrenSegal/verify-before-ship/releases/tag/v0.1.0) (2026-09-09)
 - [signal-scout v1.6.1](https://github.com/OrenSegal/signal-scout/releases/tag/v1.6.1) (2026-09-09)
-- [scoped v0.2.1](https://github.com/OrenSegal/scoped/releases/tag/v0.2.1) (2026-09-09)
 
 **TIL**
 
