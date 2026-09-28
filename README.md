@@ -1,12 +1,10 @@
 ## Oren Segal
 
-![Status](https://img.shields.io/badge/status-building-black) ![Focus](https://img.shields.io/badge/focus-applied%20AI-black) ![Location](https://img.shields.io/badge/based%20in-Brooklyn%2C%20NY-black)
-
 Founder and engineer. I build AI products, and the tests and CI checks that catch what coding agents get wrong.
 
-**Currently building: [Shelfie](https://shelfie.food)**, an iOS app that keeps track of what's in your kitchen and when it expires, then suggests what to cook from it. Scan your groceries and it identifies them on the phone first, only asking a cloud model when it has to. Swift 6 / SwiftUI with Watch, widget and iMessage extensions, on Supabase with about 100 TypeScript edge functions. Most of the code is written by Claude Code agents; I review what they produce and build the checks that decide what gets merged.
+**Currently building: [Shelfie](https://shelfie.food)**, an iOS app that keeps track of what's in your kitchen and when it expires, then suggests what to cook from it. Scan your groceries and it identifies them on the phone first, only asking a cloud model when it has to. Swift 6 / SwiftUI with Watch, widget and iMessage extensions, on Supabase with about 60 TypeScript edge functions. Most of the code is written by Claude Code agents; I review what they produce and build the checks that decide what gets merged.
 
-Shelfie is in TestFlight beta, so the architecture diagram stays private for now - ask me if you want the real version.
+Shelfie is in TestFlight beta, so the architecture diagram stays private for now. Ask me if you want the real version.
 
 **Before this:** five years as a senior data analyst at a major TV network, building the pipelines and forecasting models the business actually ran on. One pricing analysis changed how primetime ad slots were priced. A viewership forecast became the standard input for content and greenlight decisions.
 
@@ -20,15 +18,30 @@ Shelfie is in TestFlight beta, so the architecture diagram stays private for now
 - [`architecture-lint`](https://github.com/OrenSegal/architecture-lint): a module-boundary linter with a ratchet baseline, so existing violations don't block adoption but new ones fail CI.
 - [`llm-gateway-kit`](https://github.com/OrenSegal/llm-gateway-kit): the budget, caching and circuit-breaker patterns from Shelfie's AI gateway, extracted.
 - [`signal-scout`](https://github.com/OrenSegal/signal-scout): a Claude Code skill that turns a startup URL into a prospect shortlist and checks every cited source before handing it over.
+- [`til`](https://github.com/OrenSegal/til): short notes on testing and verifying agent-written code.
 - [`metropulse-nyc`](https://github.com/OrenSegal/metropulse-nyc): a Dagster/DuckDB pipeline that groups 344 NYC subway stations by how riders actually use them.
+
+## Recent
+
+<!-- recent starts -->
+**Releases**
+
+- [verify-before-ship v0.1.0](https://github.com/OrenSegal/verify-before-ship/releases/tag/v0.1.0) (2026-09-09)
+- [signal-scout v1.6.1](https://github.com/OrenSegal/signal-scout/releases/tag/v1.6.1) (2026-09-09)
+- [scoped v0.2.1](https://github.com/OrenSegal/scoped/releases/tag/v0.2.1) (2026-09-09)
+- [metropulse-nyc v1.1.0](https://github.com/OrenSegal/metropulse-nyc/releases/tag/v1.1.0) (2026-09-09)
+- [architecture-lint v1.1.0](https://github.com/OrenSegal/architecture-lint/releases/tag/v1.1.0) (2026-09-09)
+
+**TIL**
+
+- [A concurrency test on one connection can't find a race](https://github.com/OrenSegal/til/blob/main/sqlite/one-connection-cannot-test-a-race.md) (2026-09-28)
+<!-- recent ends -->
 
 <details>
 <summary>A fact that has nothing to do with any of this</summary>
 <br>
 Moved to the US in 2023, spent a year deliberately retraining in AI/ML before writing a line of Shelfie's code. Would make that trade again. Some of that retraining is public: <a href="https://github.com/OrenSegal/coursera-deep-learning-specialization">deeplearning.ai's Deep Learning Specialization</a> (notes and assignments across all five courses), and <a href="https://github.com/OrenSegal/rag-generation">a RAG lab</a>: embeddings, an in-memory Qdrant index, and real semantic search over a wine dataset.
 </details>
-
-Most of the real work lives in private repos right now. The commit graph is real; the code just isn't public yet.
 
 Brooklyn, NY. Always up for a conversation on LLM systems, agentic architecture, or anything food and inventory tech.
 
