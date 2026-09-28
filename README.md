@@ -4,7 +4,7 @@
 
 Founder and engineer. I build AI products, and the tests and CI checks that catch what coding agents get wrong.
 
-**Currently building: [Shelfie](https://shelfie.food)**, an iOS app that keeps track of what's in your kitchen and when it expires, then suggests what to cook from it. Scan your groceries and it identifies them on the phone first, only asking a cloud model when it has to. Swift 6 / SwiftUI with Watch, widget and iMessage extensions, on Supabase with about 100 TypeScript edge functions. Most of the code is written by Claude Code agents; I review what they produce and build the checks that decide what gets merged.
+**Currently building: [Shelfie](https://shelfie.food)**, an iOS app that keeps track of what's in your kitchen and when it expires, then suggests what to cook from it. Scan your groceries and it identifies them on the phone first, only asking a cloud model when it has to. Swift 6 / SwiftUI with Watch, widget and iMessage extensions, on Supabase with about 60 TypeScript edge functions. Most of the code is written by Claude Code agents; I review what they produce and build the checks that decide what gets merged.
 
 Shelfie is in TestFlight beta, so the architecture diagram stays private for now - ask me if you want the real version.
 
