@@ -17,7 +17,7 @@ Shelfie is in TestFlight beta, so the architecture diagram stays private for now
 - [`verify-before-ship`](https://github.com/OrenSegal/verify-before-ship): re-fetches every source an LLM cites and flags any claim whose words aren't on the cited page, before a person ships it.
 - [`scoped`](https://github.com/OrenSegal/scoped): stops parallel Claude Code sessions from editing the same file, enforced in a `PreToolUse` hook and tested with real racing processes.
 - [`litmus`](https://github.com/OrenSegal/litmus): tests for prompt-based skills. Deterministic checks where possible; a model judge only counts once it has agreed with known pass and fail examples.
-- [`architecture-lint`](https://github.com/OrenSegal/architecture-lint): a module-boundary linter with a ratchet baseline, so existing violations don't block adoption but new ones fail CI.
+- [`architecture-lint`](https://github.com/OrenSegal/architecture-lint): a bash module-boundary linter for TypeScript and Swift. It records today's violation count per rule, so existing debt doesn't block adoption but a rising count fails CI.
 - [`llm-gateway-kit`](https://github.com/OrenSegal/llm-gateway-kit): the budget, caching and circuit-breaker patterns from Shelfie's AI gateway, extracted.
 - [`signal-scout`](https://github.com/OrenSegal/signal-scout): a Claude Code skill that turns a startup URL into a prospect shortlist and checks every cited source before handing it over.
 - [`metropulse-nyc`](https://github.com/OrenSegal/metropulse-nyc): a Dagster/DuckDB pipeline that groups 344 NYC subway stations by how riders actually use them.
