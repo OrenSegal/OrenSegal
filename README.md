@@ -40,7 +40,7 @@ Shelfie is in TestFlight beta, so the architecture diagram stays private for now
 <details>
 <summary>A fact that has nothing to do with any of this</summary>
 <br>
-Moved to the US in 2023, spent a year deliberately retraining in AI/ML before writing a line of Shelfie's code. Would make that trade again. Some of that retraining is public: <a href="https://github.com/OrenSegal/coursera-deep-learning-specialization">deeplearning.ai's Deep Learning Specialization</a> (notes and assignments across all five courses), and <a href="https://github.com/OrenSegal/rag-generation">a RAG lab</a>: embeddings, an in-memory Qdrant index, and real semantic search over a wine dataset.
+Moved to the US in 2023, spent a year deliberately retraining in AI/ML before writing a line of Shelfie's code. Would make that trade again. Some of that retraining is public, like <a href="https://github.com/OrenSegal/rag-generation">a RAG lab</a>: embeddings, an in-memory Qdrant index, and real semantic search over a wine dataset.
 </details>
 
 Brooklyn, NY. Always up for a conversation on LLM systems, agentic architecture, or anything food and inventory tech.
