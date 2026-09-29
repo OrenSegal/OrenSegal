@@ -2,7 +2,7 @@
 
 Founder and engineer. I build AI products, and the tests and CI checks that catch what coding agents get wrong.
 
-**Currently building: [Shelfie](https://shelfie.food)**, an iOS app that keeps track of what's in your kitchen and when it expires, then suggests what to cook from it. Scan your groceries and it identifies them on the phone first, only asking a cloud model when it has to. Swift 6 / SwiftUI with Watch, widget and iMessage extensions, on Supabase with about 60 TypeScript edge functions. Most of the code is written by Claude Code agents; I review what they produce and build the checks that decide what gets merged.
+**Currently building: [Shelfie](https://shelfie.food)**, an iOS app that keeps track of what's in your kitchen and when it expires, then suggests what to cook from it. Scan your groceries and it identifies them on the phone first, only asking a cloud model when it has to. Swift 6 / SwiftUI with Watch, widget and iMessage extensions, on Supabase with about 60 TypeScript edge functions. Most of the code is written by Claude Code agents; I review what they produce and build the checks that decide what gets merged. The harness they work in treats an agent's "done" as a claim to verify, and holds a merge for me when a review asks for a person.
 
 Shelfie is in TestFlight beta, so the architecture diagram stays private for now. Ask me if you want the real version.
 
@@ -20,6 +20,14 @@ Shelfie is in TestFlight beta, so the architecture diagram stays private for now
 - [`signal-scout`](https://github.com/OrenSegal/signal-scout): a Claude Code skill that turns a startup URL into a prospect shortlist and checks every cited source before handing it over.
 - [`til`](https://github.com/OrenSegal/til): short notes on testing and verifying agent-written code.
 - [`metropulse-nyc`](https://github.com/OrenSegal/metropulse-nyc): a Dagster/DuckDB pipeline that groups 344 NYC subway stations by how riders actually use them.
+
+**Pull requests where a check proved less than it claimed:**
+
+- [scoped#1](https://github.com/OrenSegal/scoped/pull/1): the README promised safe claims under concurrent sessions, but the only test ran on one connection. Racing real OS processes let two sessions claim the same file; the PR fixes both causes.
+- [verify-before-ship#1](https://github.com/OrenSegal/verify-before-ship/pull/1): a made-up funding round scored as a near match on a page that only named the company. Numbers and names in a claim now have to appear on the page.
+- [signal-scout#3](https://github.com/OrenSegal/signal-scout/pull/3): the eval job graded hand-written outputs, so no change to the skill could fail it. It now runs the pipeline code on fixtures, and each of three planted bugs turns it red.
+- [litmus#1](https://github.com/OrenSegal/litmus/pull/1): with no known pass and fail examples, the model judge could return PASS on anything. It now refuses to grade until it has both.
+- [signal-skills#1](https://github.com/OrenSegal/signal-skills/pull/1): removed a CI job that was grading a different skill from the one in the repo.
 
 ## Recent
 
