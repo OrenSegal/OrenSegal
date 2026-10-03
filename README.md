@@ -36,9 +36,9 @@ Shelfie is in TestFlight beta, so the architecture diagram stays private for now
 
 - [sous v0.3.0](https://github.com/OrenSegal/sous/releases/tag/v0.3.0) (2026-10-02)
 - [litmus v0.2.0](https://github.com/OrenSegal/litmus/releases/tag/v0.2.0) (2026-10-02)
+- [deuce v0.1.1](https://github.com/OrenSegal/deuce/releases/tag/v0.1.1) (2026-10-02)
 - [deuce v0.1.0](https://github.com/OrenSegal/deuce/releases/tag/v0.1.0) (2026-10-02)
 - [signal-skills v1.0.1](https://github.com/OrenSegal/signal-skills/releases/tag/v1.0.1) (2026-09-28)
-- [scoped v0.2.2](https://github.com/OrenSegal/scoped/releases/tag/v0.2.2) (2026-09-28)
 
 **TIL**
 
