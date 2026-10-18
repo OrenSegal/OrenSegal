@@ -1,6 +1,6 @@
 ## Oren Segal
 
-AI engineer. I build agents, and the evals and CI checks that show whether they work.
+Applied AI engineer. I build agents, and the evals and CI checks that show whether they work.
 
 **Latest: [`rootcause`](https://github.com/OrenSegal/rootcause)**, an incident and CI root-cause agent with a hand-written loop, tools over MCP and an approval gate. I measured it over 525 runs on 25 incidents with known causes. Across seven model and effort settings, accuracy stayed at 77-84% with overlapping intervals, while cost per solved incident varied 25x. In a separate 300-run comparison, an orchestrator with workers tripled the cost for no measurable gain. Mutation-testing its brief with [`litmus`](https://github.com/OrenSegal/litmus) showed the suite couldn't catch a regression in any single instruction, which is what the next scenarios are built to fix. [Results](https://github.com/OrenSegal/rootcause#results).
 
