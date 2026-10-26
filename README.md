@@ -6,10 +6,10 @@ Applied AI engineer. I build agents, and the evals and CI checks that show wheth
 
 **Tools for checking what agents actually do:**
 
-- [`litmus`](https://github.com/OrenSegal/litmus): mutation testing for eval suites. It breaks a prompt or skill on purpose and lists the broken copies your evals missed, and it finds graders that cannot fail. Run against rootcause's brief, it killed none of 11 mutants, which told me the suite needed scenarios that hinge on a single rule.
+- [`litmus`](https://github.com/OrenSegal/litmus): mutation testing for eval suites. It breaks a prompt or skill on purpose and lists the broken copies your evals missed, and it finds graders that cannot fail. Its operators made 12 mutants of rootcause's investigator brief, and the suite killed 0 of 12 (11 survived, 1 inconclusive), which told me the suite needed scenarios that hinge on a single rule.
 - [`cited`](https://github.com/OrenSegal/cited): re-fetches every source an LLM cites and flags claims whose words, numbers or names aren't on the page.
 - [`sous`](https://github.com/OrenSegal/sous): the harness my coding agents run in. A guard hook with a block and an allow test for every rule, `tests-ran` and `tests-weakened` for green runs that proved nothing, a merge gate, and a doctor that re-checks it all. The same marketplace installs [`scoped`](https://github.com/OrenSegal/scoped) (file locks between parallel sessions, over MCP) and [`deuce`](https://github.com/OrenSegal/deuce) (post-merge cleanup with dry run and undo).
-- [`llm-gateway-kit`](https://github.com/OrenSegal/llm-gateway-kit): caching, circuit breakers and hard spending limits for Swift apps that call LLMs, extracted from the gateway in my iOS app.
+- [`llm-gateway-kit`](https://github.com/OrenSegal/llm-gateway-kit): caching, circuit breakers and daily spending limits for Swift apps that call LLMs, extracted from the gateway in my iOS app.
 
 **Pull requests where a check proved less than it claimed:**
 
