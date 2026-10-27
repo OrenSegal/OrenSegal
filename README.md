@@ -26,11 +26,11 @@ Before this: five years as a senior data analyst at an Israeli TV network, build
 <!-- recent starts -->
 **Releases**
 
-- [sous v0.3.1](https://github.com/OrenSegal/sous/releases/tag/v0.3.1) (2026-10-14)
-- [sous v0.3.0](https://github.com/OrenSegal/sous/releases/tag/v0.3.0) (2026-10-02)
-- [litmus v0.2.0](https://github.com/OrenSegal/litmus/releases/tag/v0.2.0) (2026-10-02)
-- [deuce v0.1.1](https://github.com/OrenSegal/deuce/releases/tag/v0.1.1) (2026-10-02)
-- [deuce v0.1.0](https://github.com/OrenSegal/deuce/releases/tag/v0.1.0) (2026-10-02)
+- [rootcause v0.1.0](https://github.com/OrenSegal/rootcause/releases/tag/v0.1.0) (2026-10-27)
+- [llm-gateway-kit v0.1.1](https://github.com/OrenSegal/llm-gateway-kit/releases/tag/v0.1.1) (2026-10-27)
+- [litmus v0.3.0](https://github.com/OrenSegal/litmus/releases/tag/v0.3.0) (2026-10-27)
+- [blast-shield v1.1.1](https://github.com/OrenSegal/blast-shield/releases/tag/v1.1.1) (2026-10-27)
+- [blast-shield v1.1.0](https://github.com/OrenSegal/blast-shield/releases/tag/v1.1.0) (2026-10-27)
 
 **TIL**
 
