@@ -10,6 +10,13 @@ Applied AI engineer. I build agents, and the evals and CI checks that show wheth
 - [`cited`](https://github.com/OrenSegal/cited): re-fetches every source an LLM cites and flags claims whose words, numbers or names aren't on the page.
 - [`sous`](https://github.com/OrenSegal/sous): the harness my coding agents run in. A guard hook with a block and an allow test for every rule, `tests-ran` and `tests-weakened` for green runs that proved nothing, a merge gate, and a doctor that re-checks it all. The same marketplace installs [`scoped`](https://github.com/OrenSegal/scoped) (file locks between parallel sessions, over MCP) and [`deuce`](https://github.com/OrenSegal/deuce) (post-merge cleanup with dry run and undo).
 - [`llm-gateway-kit`](https://github.com/OrenSegal/llm-gateway-kit): caching, circuit breakers and daily spending limits for Swift apps that call LLMs, extracted from the gateway in my iOS app.
+- [`blast-shield`](https://github.com/OrenSegal/blast-shield): holds a risky shell command and shows what it would change before you press Proceed. A fork of the Blast Radius mod from Anthropic's DevRel team, with wider coverage and explanations.
+
+**Retrieval and agent skills:**
+
+- [`rag-generation`](https://github.com/OrenSegal/rag-generation): BM25, a local embedding model and a hybrid scored on 55 labelled queries, with bootstrap intervals. BM25 led when a query named the label and mostly failed on paraphrases, so the right pick depends on your query mix.
+- [`signal-scout`](https://github.com/OrenSegal/signal-scout): a skill that takes a startup's URL and returns likely first customers, dropping any whose cited evidence isn't on the page.
+- [`signal-skills`](https://github.com/OrenSegal/signal-skills): six skills for Claude Code and Codex that mine podcasts and app reviews into cited build proposals.
 
 **Pull requests where a check proved less than it claimed:**
 
@@ -17,7 +24,7 @@ Applied AI engineer. I build agents, and the evals and CI checks that show wheth
 - [cited#1](https://github.com/OrenSegal/cited/pull/1): a made-up funding round scored as a near match. Numbers and names in a claim now have to be on the page.
 - [signal-scout#3](https://github.com/OrenSegal/signal-scout/pull/3): the eval job graded hand-written outputs, so no change could fail it. It now runs the pipeline on fixtures, and three planted bugs each turn it red.
 
-**Building: [Shelfie](https://shelfie.food)**, an iOS kitchen-inventory app in closed TestFlight beta, written mostly by Claude Code agents inside the sous harness, with every model call going through one gateway.
+**Building: [Shelfie](https://shelfie.food)**, an iOS kitchen-inventory app in closed TestFlight beta, with much of the code written by Claude Code agents inside the sous harness. Every model call goes through one gateway.
 
 Before this: five years as a senior data analyst at an Israeli TV network, building pricing and forecasting models.
 
