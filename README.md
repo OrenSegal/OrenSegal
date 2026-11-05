@@ -26,7 +26,7 @@ Applied AI engineer. I build agents, and the evals and CI checks that show wheth
 
 **Building: [Shelfie](https://shelfie.food)**, an iOS kitchen-inventory app in closed TestFlight beta, with much of the code written by Claude Code agents inside the sous harness. Every cloud model call from the app goes through one gateway.
 
-Before this: five years as a senior data analyst at an Israeli TV network, building pricing and forecasting models.
+Before this: five years as a senior data analyst at an Israeli TV network, building pricing and forecasting models. [How I got the pricing model adopted](https://orensegal.github.io/writing/reshet-pricing-model/).
 
 ## Recent
 
