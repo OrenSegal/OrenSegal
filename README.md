@@ -17,6 +17,7 @@ Applied AI engineer. I build agents, and the evals and CI checks that show wheth
 - [`rag-generation`](https://github.com/OrenSegal/rag-generation): BM25, a local embedding model and a hybrid scored on 55 labelled queries, with bootstrap intervals. BM25 led when a query named the label and mostly failed on paraphrases, so the right pick depends on your query mix.
 - [`signal-scout`](https://github.com/OrenSegal/signal-scout): a skill that takes a startup's URL and returns likely first customers, dropping any whose cited evidence is clearly missing from the page and flagging partial matches for review.
 - [`signal-skills`](https://github.com/OrenSegal/signal-skills): six skills for Claude Code and Codex that mine podcasts and app reviews into cited build proposals.
+- [`architecture-lint`](https://github.com/OrenSegal/architecture-lint): a module-boundary linter with a baseline file, so CI fails only on new violations.
 
 **Pull requests where a check proved less than it claimed:**
 
@@ -39,9 +40,6 @@ Before this: five years as a senior data analyst at an Israeli TV network, build
 - [scoped v0.4.2](https://github.com/OrenSegal/scoped/releases/tag/v0.4.2) (2026-11-02)
 - [rootcause v0.2.0](https://github.com/OrenSegal/rootcause/releases/tag/v0.2.0) (2026-11-02)
 
-**TIL**
-
-- [A concurrency test on one connection can't find a race](https://github.com/OrenSegal/til/blob/main/sqlite/one-connection-cannot-test-a-race.md) (2026-09-28)
 <!-- recent ends -->
 
 Brooklyn, NY · [Portfolio](https://orensegal.github.io) · [LinkedIn](https://www.linkedin.com/in/oren-segal) · [orenssegal@gmail.com](mailto:orenssegal@gmail.com)

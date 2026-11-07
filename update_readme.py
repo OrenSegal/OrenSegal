@@ -1,4 +1,4 @@
-"""Fill the Recent block in README.md with the latest releases and TIL notes.
+"""Fill the Recent block in README.md with the latest releases.
 
 Runs in a GitHub Action with `gh` authenticated by the workflow token.
 """
@@ -29,20 +29,9 @@ def releases(limit: int = 5):
     return sorted(found, reverse=True)[:limit]
 
 
-def tils(limit: int = 5):
-    raw = subprocess.run(
-        ["gh", "api", f"repos/{USER}/til/contents/README.md", "-H", "Accept: application/vnd.github.raw"],
-        check=True, capture_output=True, text=True,
-    ).stdout
-    found = []
-    for title, path, date in re.findall(r"^- \[(.+?)\]\((.+?)\) - (\d{4}-\d{2}-\d{2})$", raw, re.M):
-        found.append((date, f"[{title}](https://github.com/{USER}/til/blob/main/{path})"))
-    return sorted(found, reverse=True)[:limit]
-
 
 def main() -> None:
     lines = ["**Releases**", ""] + [f"- {link} ({date})" for date, link in releases()]
-    lines += ["", "**TIL**", ""] + [f"- {link} ({date})" for date, link in tils()]
     block = START + "\n" + "\n".join(lines) + "\n" + END
     text = README.read_text(encoding="utf-8")
     README.write_text(re.sub(re.escape(START) + ".*" + re.escape(END), block, text, flags=re.S), encoding="utf-8")
