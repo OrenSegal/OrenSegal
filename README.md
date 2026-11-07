@@ -39,7 +39,6 @@ Before this: five years as a senior data analyst at an Israeli TV network, build
 - [signal-scout v1.7.0](https://github.com/OrenSegal/signal-scout/releases/tag/v1.7.0) (2026-11-02)
 - [scoped v0.4.2](https://github.com/OrenSegal/scoped/releases/tag/v0.4.2) (2026-11-02)
 - [rootcause v0.2.0](https://github.com/OrenSegal/rootcause/releases/tag/v0.2.0) (2026-11-02)
-
 <!-- recent ends -->
 
 Brooklyn, NY · [Portfolio](https://orensegal.github.io) · [LinkedIn](https://www.linkedin.com/in/oren-segal) · [orenssegal@gmail.com](mailto:orenssegal@gmail.com)
