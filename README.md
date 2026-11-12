@@ -27,7 +27,7 @@ Applied AI engineer. I build agents, and the evals and CI checks that show wheth
 - [cited#1](https://github.com/OrenSegal/cited/pull/1): a made-up funding round scored as a near match. Numbers and names in a claim now have to be on the page.
 - [signal-scout#3](https://github.com/OrenSegal/signal-scout/pull/3): the eval job graded hand-written outputs, so no change could fail it. It now runs the pipeline on fixtures, and three planted bugs each turn it red.
 
-Design decisions, with the alternatives I rejected: [rootcause](https://github.com/OrenSegal/rootcause/blob/main/docs/decisions.md), [sous](https://github.com/OrenSegal/sous/blob/main/docs/decisions.md), [litmus](https://github.com/OrenSegal/litmus/blob/main/docs/decisions.md), [cited](https://github.com/OrenSegal/cited/blob/main/docs/decisions.md).
+Design decisions, with the alternatives I rejected where they were written down (each file says "not recorded" where they were not): [rootcause](https://github.com/OrenSegal/rootcause/blob/main/docs/decisions.md), [sous](https://github.com/OrenSegal/sous/blob/main/docs/decisions.md), [litmus](https://github.com/OrenSegal/litmus/blob/main/docs/decisions.md), [cited](https://github.com/OrenSegal/cited/blob/main/docs/decisions.md).
 
 **Building: [Shelfie](https://shelfie.food)**, an iOS kitchen-inventory app, pre-launch. Every cloud model call from the app goes through one gateway.
 

@@ -20,7 +20,7 @@ def gh(*args: str):
 def releases(limit: int = 5):
     found = []
     for repo in gh(f"users/{USER}/repos?type=owner&sort=pushed&per_page=50"):
-        if repo["fork"] or repo["private"]:
+        if repo["fork"] or repo["private"] or repo["archived"]:
             continue
         for rel in gh(f"repos/{USER}/{repo['name']}/releases?per_page=3"):
             if rel["draft"] or not rel["published_at"]:
