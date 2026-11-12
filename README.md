@@ -29,9 +29,9 @@ Applied AI engineer. I build agents, and the evals and CI checks that show wheth
 
 Design decisions, with the alternatives I rejected where they were written down (each file says "not recorded" where they were not): [rootcause](https://github.com/OrenSegal/rootcause/blob/main/docs/decisions.md), [sous](https://github.com/OrenSegal/sous/blob/main/docs/decisions.md), [litmus](https://github.com/OrenSegal/litmus/blob/main/docs/decisions.md), [cited](https://github.com/OrenSegal/cited/blob/main/docs/decisions.md).
 
-**Building: [Shelfie](https://shelfie.food)**, an iOS kitchen-inventory app, pre-launch. Every cloud model call from the app goes through one gateway.
+**Building: [Shelfie](https://shelfie.food)**, an iOS kitchen-inventory app, in closed beta. Every cloud model call from the app goes through one gateway.
 
-Before this: five years as a senior data analyst at an Israeli TV network, building pricing and forecasting models. [How I got the pricing model adopted](https://orensegal.github.io/writing/reshet-pricing-model/).
+Since 2024 I have also built and maintained reporting automation for a consumer transactions business. Before that: five years as a senior data analyst at an Israeli TV network, building pricing and forecasting models. [How I got the pricing model adopted](https://orensegal.github.io/writing/reshet-pricing-model/).
 
 ## Recent
 
