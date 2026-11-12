@@ -19,7 +19,7 @@ Applied AI engineer. I build agents, and the evals and CI checks that show wheth
 - [`signal-skills`](https://github.com/OrenSegal/signal-skills): six skills for Claude Code and Codex that mine podcasts and app reviews into cited build proposals.
 - [`architecture-lint`](https://github.com/OrenSegal/sous/tree/main/plugins/architecture-lint): a module-boundary linter with a per-rule count baseline, so CI fails only when a rule's violation count rises.
 
-**How I build.** Most commits in these repos carry a Claude co-author trailer (rootcause 54 of 58, sous 47 of 61, merges excluded, as of 2026-11-08). The agents run inside sous, which blocks destructive commands and fails a green run that executed no tests. Before I trust a check, I make sure it can fail: litmus mutates the prompt under test, and planted bugs have to turn CI red. The pull requests below are the times a check proved less than it claimed.
+**How I build.** My coding agents run inside sous, which blocks destructive commands and fails a green run that executed no tests. Before I trust a check, I make sure it can fail: litmus mutates the prompt under test, and planted bugs have to turn CI red. The pull requests below are the times a check proved less than it claimed.
 
 **Pull requests where a check proved less than it claimed:**
 
@@ -29,7 +29,7 @@ Applied AI engineer. I build agents, and the evals and CI checks that show wheth
 
 Design decisions, with the alternatives I rejected: [rootcause](https://github.com/OrenSegal/rootcause/blob/main/docs/decisions.md), [sous](https://github.com/OrenSegal/sous/blob/main/docs/decisions.md), [litmus](https://github.com/OrenSegal/litmus/blob/main/docs/decisions.md), [cited](https://github.com/OrenSegal/cited/blob/main/docs/decisions.md).
 
-**Building: [Shelfie](https://shelfie.food)**, an iOS kitchen-inventory app, pre-launch, with much of its code written by Claude Code agents running inside the sous harness. Every cloud model call from the app goes through one gateway.
+**Building: [Shelfie](https://shelfie.food)**, an iOS kitchen-inventory app, pre-launch. Every cloud model call from the app goes through one gateway.
 
 Before this: five years as a senior data analyst at an Israeli TV network, building pricing and forecasting models. [How I got the pricing model adopted](https://orensegal.github.io/writing/reshet-pricing-model/).
 
