@@ -31,7 +31,7 @@ Design decisions, with the alternatives I rejected where they were written down 
 
 **Building: [Shelfie](https://shelfie.food)**, an iOS kitchen-inventory app, in closed beta. Every cloud model call from the app goes through one gateway.
 
-Since 2024 I have also built and maintained reporting automation for a consumer transactions business. Before that: five years as a senior data analyst at an Israeli TV network, building pricing and forecasting models. [How I got the pricing model adopted](https://orensegal.github.io/writing/reshet-pricing-model/).
+Since 2025 I have also built and maintained reporting automation for a consumer transactions business. Before that: five years as a senior data analyst at an Israeli TV network, building pricing and forecasting models. [How I got the pricing model adopted](https://orensegal.github.io/writing/reshet-pricing-model/).
 
 ## Recent
 
