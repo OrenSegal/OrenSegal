@@ -2,6 +2,8 @@
 
 Applied AI engineer. I build agents, the evals that show whether they work, and the checks that show whether the evals can fail.
 
+[Portfolio](https://orensegal.github.io) · [Experience](https://orensegal.github.io/#experience) · [Resume](https://orensegal.github.io/resume.pdf) · [Writing](https://orensegal.github.io/writing/) ([RSS](https://orensegal.github.io/writing/feed.xml)) · [LinkedIn](https://www.linkedin.com/in/oren-segal)
+
 > **Across 525 graded runs, switching models changed cost per solved incident 25x, and no accuracy gap could be detected.** [rootcause](https://github.com/OrenSegal/rootcause) · [write-up](https://orensegal.github.io/writing/rootcause-benchmark/)
 
 | Project | What it does | Result |
