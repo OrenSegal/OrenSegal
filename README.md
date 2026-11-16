@@ -1,41 +1,28 @@
 ## Oren Segal
 
-Applied AI engineer and former senior data analyst. I build agents and the evals that show whether they work, and the data pipelines and forecasts underneath.
+Applied AI engineer. I build agents, the evals that show whether they work, and the checks that show whether the evals can fail.
 
-**[`rootcause`](https://github.com/OrenSegal/rootcause)** is an incident and CI root-cause agent: a hand-written tool loop over MCP, an approval gate on production actions, an append-only log for crash recovery, and OpenTelemetry traces. It runs as a CLI, an MCP server and a GitHub Action. The 525-run sweep used 25 incidents with known causes, several with planted decoys (the suite has 33 now). Across those 525 graded runs on seven model, effort and retrieval settings (Claude Code as the agent, over rootcause's tools and grader), cost per solved incident varied 25x, and in a separate 300-run comparison an orchestrator with workers cost about three times as much as a single agent. On accuracy, 77-84% of runs passed and no pair of settings differed detectably, but runs repeat the same 25 incidents, and paired by incident the design detects only gaps above about 13-19 points between model tiers, so model accuracy differences are unresolved, not a tie. The result also depends on the grader: without one strict service check, the point gap between Opus and Sonnet widens to 93% against 83%, a comparison chosen after the fact and not corrected for the others, so a hint rather than a finding. I found no detectable difference between my hand-written loop and a LangGraph version of the same agent either: -2.7 points (-8.0 to +2.7) paired, with gaps under about 8 points out of reach. On eight incidents adapted from public postmortems, with the answers committed before any run, Haiku passed 50% (21-79%) against 77% on my own suite: a rough range from eight cases, not a test. [Results](https://github.com/OrenSegal/rootcause#results), [limitations](https://github.com/OrenSegal/rootcause#limitations).
+> **Across 525 graded runs, switching models changed cost per solved incident 25x, and no accuracy gap could be detected.** [rootcause](https://github.com/OrenSegal/rootcause) · [write-up](https://orensegal.github.io/writing/rootcause-benchmark/)
 
-**Tools for checking what agents actually do:**
+| Project | What it does | Result |
+|---|---|---|
+| [**rootcause**](https://github.com/OrenSegal/rootcause) | Incident and CI root-cause agent: hand-written tool loop over MCP, approval gate, crash-recovery log, OpenTelemetry. CLI, MCP server, GitHub Action | 25x cost spread, 77-84% pass rate across 7 model settings |
+| [**litmus**](https://github.com/OrenSegal/litmus) | Mutation testing for eval suites: breaks a prompt on purpose and finds graders that can't fail | rootcause's suite killed 0 of 12 mutants |
+| [**cited**](https://github.com/OrenSegal/cited) | Re-fetches every source an LLM cites and flags claims the page doesn't support | 10 of 15 unsupported claims caught |
+| [**sous**](https://github.com/OrenSegal/sous) | The harness my coding agents run in: guard hooks, fails green runs that ran no tests, merge gate. Also ships scoped, deuce, blast-shield, architecture-lint | Every rule has a block and an allow test |
+| [**codebase-audit**](https://github.com/OrenSegal/codebase-audit) | Adversarial audit skill: a separate refuter challenges every serious finding, and fixes come back as tickets | |
+| [**rag-generation**](https://github.com/OrenSegal/rag-generation) | BM25 vs local embeddings vs hybrid on 55 labelled queries, with bootstrap intervals | BM25 won on exact labels and lost on paraphrases |
+| [**ny-noise**](https://github.com/OrenSegal/ny-noise) ([live](https://ny-noise.vercel.app)) | 1.6M NYC 311 noise reports mapped block by block, with next week's forecast for 177 ZIPs | 78% deviance explained on held-out areas |
+| [**llm-gateway-kit**](https://github.com/OrenSegal/llm-gateway-kit) | Caching, circuit breakers and daily spend caps for Swift apps that call LLMs | |
+| [**signal-scout**](https://github.com/OrenSegal/signal-scout) · [**signal-skills**](https://github.com/OrenSegal/signal-skills) · [**visibility**](https://github.com/OrenSegal/visibility) | Agent skills: find a startup's first customers, turn podcasts and reviews into cited build proposals, get a product listed on agent marketplaces | |
 
-- [`litmus`](https://github.com/OrenSegal/litmus): mutation testing for eval suites. It breaks a prompt or skill on purpose and lists the broken copies your evals missed, and it finds graders that cannot fail. Its operators made 12 mutants of rootcause's investigator brief, and the suite killed 0 of 12 (11 survived, 1 inconclusive). Eight scenarios built around single rules then killed 2 of 14, both through the search requirement; cited's suite killed 5 of 14. One run per mutant throughout, so run-to-run variance is not measured.
-- [`cited`](https://github.com/OrenSegal/cited): re-fetches every source an LLM cites and flags claims whose words, numbers or names it can't find on the page. On its own 29-claim benchmark it caught 10 of 15 unsupported claims (recall 0.67, 95% interval 0.41-0.90); swapped words get through.
-- [`sous`](https://github.com/OrenSegal/sous): the harness my coding agents run in. A guard hook with a block and an allow test for every rule, `tests-ran` and `tests-weakened` for green runs that proved nothing, a merge gate, and a doctor that re-checks it all. The same marketplace installs [`scoped`](https://github.com/OrenSegal/sous/tree/main/plugins/scoped) (file locks between parallel sessions, over MCP) and [`deuce`](https://github.com/OrenSegal/sous/tree/main/plugins/deuce) (post-merge cleanup with dry run and undo).
-- [`llm-gateway-kit`](https://github.com/OrenSegal/llm-gateway-kit): caching, circuit breakers and daily spending limits for Swift apps that call LLMs, based on the patterns in my iOS app's gateway.
-- [`blast-shield`](https://github.com/OrenSegal/sous/tree/main/plugins/blast-shield): holds a risky shell command and shows what it would change before you press Proceed. A fork of the Blast Radius mod from Anthropic's DevRel team, with wider coverage and explanations.
+Intervals, sample sizes and limitations are in each repo's README.
 
-**Retrieval and agent skills:**
+**Building [Shelfie](https://shelfie.food)**, an iOS kitchen-inventory app in closed beta, written by coding agents inside sous.
 
-- [`rag-generation`](https://github.com/OrenSegal/rag-generation): BM25, a local embedding model and a hybrid scored on 55 labelled queries, with bootstrap intervals. BM25 led when a query named the label and mostly failed on paraphrases, so the right pick depends on your query mix.
-- [`signal-scout`](https://github.com/OrenSegal/signal-scout): a skill that takes a startup's URL and returns likely first customers, dropping any whose cited evidence is clearly missing from the page and flagging partial matches for review.
-- [`signal-skills`](https://github.com/OrenSegal/signal-skills): six skills for Claude Code and Codex that mine podcasts and app reviews into cited build proposals.
-- [`architecture-lint`](https://github.com/OrenSegal/sous/tree/main/plugins/architecture-lint): a module-boundary linter with a per-rule count baseline, so CI fails only when a rule's violation count rises.
+**Before:** since 2025, the data side of a consumer transactions business (an unattended BigQuery warehouse and anomaly-flagging sales forecasts). Before that, five years as a senior data analyst at Reshet 13, building pricing and forecasting models.
 
-**Data and forecasting:**
-
-- [`ny-noise`](https://github.com/OrenSegal/ny-noise) ([live](https://ny-noise.vercel.app)): where 1.6 million NYC 311 noise reports concentrate, block by block, and next week's forecast for 177 ZIP codes. On held-out areas the spatial model explains 78% of deviance, against 66% from housing units alone; the forecast beats repeating last week and does not clearly beat exponential smoothing. Wake the Block estimates how many people one 3 a.m. noise wakes on any street.
-
-**How I build.** My coding agents run inside sous, which blocks destructive commands and fails a green run that executed no tests. Before I trust a check, I make sure it can fail: litmus mutates the prompt under test, and planted bugs have to turn CI red. The pull requests below are the times a check proved less than it claimed.
-
-**Pull requests where a check proved less than it claimed:**
-
-- [scoped#1](https://github.com/OrenSegal/scoped/pull/1): the only concurrency test ran on one connection. Racing real processes let two sessions edit the same file; the PR fixes both causes.
-- [cited#1](https://github.com/OrenSegal/cited/pull/1): a made-up funding round scored as a near match. Numbers and names in a claim now have to be on the page.
-- [signal-scout#3](https://github.com/OrenSegal/signal-scout/pull/3): the eval job graded hand-written outputs, so no change could fail it. It now runs the pipeline on fixtures, and three planted bugs each turn it red.
-
-Design decisions, with the alternatives I rejected where they were written down (each file says "not recorded" where they were not): [rootcause](https://github.com/OrenSegal/rootcause/blob/main/docs/decisions.md), [sous](https://github.com/OrenSegal/sous/blob/main/docs/decisions.md), [litmus](https://github.com/OrenSegal/litmus/blob/main/docs/decisions.md), [cited](https://github.com/OrenSegal/cited/blob/main/docs/decisions.md).
-
-**Building: [Shelfie](https://shelfie.food)**, an iOS kitchen-inventory app, in closed beta. Every cloud model call from the app goes through one gateway.
-
-Since 2025 I have also run the data side of a consumer transactions business: a BigQuery warehouse that loads each day with no one in the loop, a sales forecast that flags unusual days, and a watch list of the biggest accounts. Before that: five years as a senior data analyst at an Israeli TV network, building pricing and forecasting models. [How I got the pricing model adopted](https://orensegal.github.io/writing/reshet-pricing-model/).
+**Writing:** [The benchmark that didn't pick a winner](https://orensegal.github.io/writing/rootcause-benchmark/) · [Three checks that passed when they shouldn't have](https://orensegal.github.io/writing/checks-that-could-not-fail/) · [Getting a pricing model adopted at Reshet 13](https://orensegal.github.io/writing/reshet-pricing-model/)
 
 ## Recent
 
@@ -49,4 +36,4 @@ Since 2025 I have also run the data side of a consumer transactions business: a 
 - [llm-gateway-kit v0.2.0](https://github.com/OrenSegal/llm-gateway-kit/releases/tag/v0.2.0) (2026-11-02)
 <!-- recent ends -->
 
-Brooklyn, NY · [Portfolio](https://orensegal.github.io) · [LinkedIn](https://www.linkedin.com/in/oren-segal) · [orenssegal@gmail.com](mailto:orenssegal@gmail.com)
+Brooklyn, NY · Open to applied AI engineering roles · [Portfolio](https://orensegal.github.io) · [LinkedIn](https://www.linkedin.com/in/oren-segal) · [orenssegal@gmail.com](mailto:orenssegal@gmail.com)
