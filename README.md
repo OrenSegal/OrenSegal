@@ -1,6 +1,6 @@
 ## Oren Segal
 
-Applied AI engineer. I build agents, and the evals and CI checks that show whether they work.
+Applied AI engineer and former senior data analyst. I build agents and the evals that show whether they work, and the data pipelines and forecasts underneath.
 
 **[`rootcause`](https://github.com/OrenSegal/rootcause)** is an incident and CI root-cause agent: a hand-written tool loop over MCP, an approval gate on production actions, an append-only log for crash recovery, and OpenTelemetry traces. It runs as a CLI, an MCP server and a GitHub Action. The 525-run sweep used 25 incidents with known causes, several with planted decoys (the suite has 33 now). Across those 525 graded runs on seven model, effort and retrieval settings (Claude Code as the agent, over rootcause's tools and grader), cost per solved incident varied 25x, and in a separate 300-run comparison an orchestrator with workers cost about three times as much as a single agent. On accuracy, 77-84% of runs passed and no pair of settings differed detectably, but runs repeat the same 25 incidents, and paired by incident the design detects only gaps above about 13-19 points between model tiers, so model accuracy differences are unresolved, not a tie. The result also depends on the grader: without one strict service check, the point gap between Opus and Sonnet widens to 93% against 83%, a comparison chosen after the fact and not corrected for the others, so a hint rather than a finding. I found no detectable difference between my hand-written loop and a LangGraph version of the same agent either: -2.7 points (-8.0 to +2.7) paired, with gaps under about 8 points out of reach. On eight incidents adapted from public postmortems, with the answers committed before any run, Haiku passed 50% (21-79%) against 77% on my own suite: a rough range from eight cases, not a test. [Results](https://github.com/OrenSegal/rootcause#results), [limitations](https://github.com/OrenSegal/rootcause#limitations).
 
@@ -19,6 +19,10 @@ Applied AI engineer. I build agents, and the evals and CI checks that show wheth
 - [`signal-skills`](https://github.com/OrenSegal/signal-skills): six skills for Claude Code and Codex that mine podcasts and app reviews into cited build proposals.
 - [`architecture-lint`](https://github.com/OrenSegal/sous/tree/main/plugins/architecture-lint): a module-boundary linter with a per-rule count baseline, so CI fails only when a rule's violation count rises.
 
+**Data and forecasting:**
+
+- [`ny-noise`](https://github.com/OrenSegal/ny-noise) ([live](https://ny-noise.vercel.app)): where 1.6 million NYC 311 noise reports concentrate, block by block, and next week's forecast for 177 ZIP codes. On held-out areas the spatial model explains 78% of deviance, against 66% from housing units alone; the forecast beats repeating last week and does not clearly beat exponential smoothing. Wake the Block estimates how many people one 3 a.m. noise wakes on any street.
+
 **How I build.** My coding agents run inside sous, which blocks destructive commands and fails a green run that executed no tests. Before I trust a check, I make sure it can fail: litmus mutates the prompt under test, and planted bugs have to turn CI red. The pull requests below are the times a check proved less than it claimed.
 
 **Pull requests where a check proved less than it claimed:**
@@ -31,7 +35,7 @@ Design decisions, with the alternatives I rejected where they were written down 
 
 **Building: [Shelfie](https://shelfie.food)**, an iOS kitchen-inventory app, in closed beta. Every cloud model call from the app goes through one gateway.
 
-Since 2025 I have also built and maintained reporting automation for a consumer transactions business. Before that: five years as a senior data analyst at an Israeli TV network, building pricing and forecasting models. [How I got the pricing model adopted](https://orensegal.github.io/writing/reshet-pricing-model/).
+Since 2025 I have also run the data side of a consumer transactions business: a BigQuery warehouse that loads each day with no one in the loop, a sales forecast that flags unusual days, and a watch list of the biggest accounts. Before that: five years as a senior data analyst at an Israeli TV network, building pricing and forecasting models. [How I got the pricing model adopted](https://orensegal.github.io/writing/reshet-pricing-model/).
 
 ## Recent
 
