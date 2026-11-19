@@ -29,12 +29,19 @@ def releases(limit: int = 5):
     return sorted(found, reverse=True)[:limit]
 
 
+def render(text: str, items) -> str:
+    """Return README text with the Recent block replaced by `items` (date, link) pairs."""
+    lines = ["**Releases**", ""] + [f"- {link} ({date})" for date, link in items]
+    block = START + "\n" + "\n".join(lines) + "\n" + END
+    # A function replacement, so nothing in a release name is read as a regex escape.
+    out, count = re.subn(re.escape(START) + ".*" + re.escape(END), lambda _: block, text, flags=re.S)
+    if count != 1:
+        raise SystemExit(f"README.md must contain exactly one {START} ... {END} block, found {count}")
+    return out
+
 
 def main() -> None:
-    lines = ["**Releases**", ""] + [f"- {link} ({date})" for date, link in releases()]
-    block = START + "\n" + "\n".join(lines) + "\n" + END
-    text = README.read_text(encoding="utf-8")
-    README.write_text(re.sub(re.escape(START) + ".*" + re.escape(END), block, text, flags=re.S), encoding="utf-8")
+    README.write_text(render(README.read_text(encoding="utf-8"), releases()), encoding="utf-8")
 
 
 if __name__ == "__main__":
