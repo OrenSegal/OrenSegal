@@ -9,7 +9,7 @@ Applied AI engineer. I build agents, the evals that show whether they work, and 
 | [**rootcause**](https://github.com/OrenSegal/rootcause) | Incident and CI root-cause agent: hand-written tool loop over MCP, approval gate, crash-recovery log, OpenTelemetry. CLI, MCP server, GitHub Action | 25x cost spread, 77-84% pass rate across 7 model settings |
 | [**litmus**](https://github.com/OrenSegal/litmus) | Mutation testing for eval suites: breaks a prompt on purpose and finds graders that can't fail | rootcause's suite killed 0 of 12 mutants |
 | [**cited**](https://github.com/OrenSegal/cited) | Re-fetches every source an LLM cites and flags claims the page doesn't support | 10 of 15 unsupported claims caught |
-| [**sous**](https://github.com/OrenSegal/sous) | The harness my coding agents run in: guard hooks, fails green runs that ran no tests, merge gate. Also ships scoped, deuce, blast-shield, architecture-lint | Every rule has a block and an allow test |
+| [**sous**](https://github.com/OrenSegal/sous) | Guard hooks for Claude Code: blocks destructive commands, fails green runs that ran no tests, gates a merge on evidence. Also ships scoped, deuce, blast-shield, architecture-lint | Every rule has a block and an allow test |
 | [**codebase-audit**](https://github.com/OrenSegal/codebase-audit) | Adversarial audit skill: a separate refuter challenges every serious finding, and fixes come back as tickets | |
 | [**rag-generation**](https://github.com/OrenSegal/rag-generation) | BM25 vs local embeddings vs hybrid on 55 labelled queries, with bootstrap intervals | BM25 won on exact labels and lost on paraphrases |
 | [**ny-noise**](https://github.com/OrenSegal/ny-noise) ([live](https://ny-noise.vercel.app)) | 1.6M NYC 311 noise reports mapped block by block, with next week's forecast for 177 ZIPs | 78% deviance explained on held-out areas |
@@ -18,7 +18,9 @@ Applied AI engineer. I build agents, the evals that show whether they work, and 
 
 Intervals, sample sizes and limitations are in each repo's README.
 
-**Building [Shelfie](https://shelfie.food)**, an iOS kitchen-inventory app in closed beta, written by coding agents inside sous.
+**Merged upstream:** [career-ops](https://github.com/career-ops-hq/career-ops) (84k stars), `verify-all`: one command that runs the fact, ATS and voice checks on a CV, plus a dead-link check. [PR](https://github.com/career-ops-hq/career-ops/pull/7401)
+
+**Building [Shelfie](https://shelfie.food)**, an iOS kitchen app, pre-launch. A camera walk through the kitchen becomes a live inventory.
 
 **Before:** since 2025, the data side of a consumer transactions business (an unattended BigQuery warehouse and anomaly-flagging sales forecasts). Before that, five years as a senior data analyst at Reshet 13, building pricing and forecasting models.
 
