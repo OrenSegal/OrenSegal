@@ -1,0 +1,180 @@
+{
+  "name": "oren-tools",
+  "owner": {
+    "name": "Oren Segal"
+  },
+  "metadata": {
+    "description": "Agent evals, guardrails and research skills by Oren Segal: mutation testing for eval suites, citation checking, guard hooks for Claude Code, codebase audit, and customer-signal research. Each plugin lives in its own repo."
+  },
+  "plugins": [
+    {
+      "name": "litmus",
+      "description": "Mutation testing for LLM and agent eval suites. Can your eval fail? Breaks the skill on purpose and checks the evals notice.",
+      "category": "testing",
+      "homepage": "https://github.com/OrenSegal/litmus",
+      "source": {
+        "source": "github",
+        "repo": "OrenSegal/litmus"
+      }
+    },
+    {
+      "name": "cited",
+      "description": "Re-fetches every cited source and flags claims that are not on the page.",
+      "category": "research",
+      "homepage": "https://github.com/OrenSegal/cited",
+      "source": {
+        "source": "github",
+        "repo": "OrenSegal/cited"
+      }
+    },
+    {
+      "name": "sous",
+      "description": "sous-guard PreToolUse hook, the test-audit and prune-tests skills and tests-ran. Run `sous install` for permissions, sandbox and ask gates.",
+      "category": "security",
+      "homepage": "https://github.com/OrenSegal/sous",
+      "source": {
+        "source": "github",
+        "repo": "OrenSegal/sous"
+      }
+    },
+    {
+      "name": "blast-shield",
+      "description": "Mod: holds risky shell commands (rm, git reset/clean/force-push, kubectl, terraform, docker, SQL), shows what they would change and whether it can be undone, and runs them only on Proceed. Apache-2.0 fork of Anthropic's Blast Radius; see plugins/blast-shield/NOTICE.",
+      "category": "security",
+      "homepage": "https://github.com/OrenSegal/sous",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/OrenSegal/sous.git",
+        "path": "plugins/blast-shield"
+      }
+    },
+    {
+      "name": "scoped",
+      "description": "File claims between concurrent Claude Code sessions, enforced by a PreToolUse hook.",
+      "category": "development",
+      "homepage": "https://github.com/OrenSegal/sous",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/OrenSegal/sous.git",
+        "path": "plugins/scoped"
+      }
+    },
+    {
+      "name": "deuce",
+      "description": "Post-merge cleanup: finds merged branches, dry-runs the sweep, then removes worktrees and local and remote branches on approval, with an audit log and undo.",
+      "category": "development",
+      "homepage": "https://github.com/OrenSegal/sous",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/OrenSegal/sous.git",
+        "path": "plugins/deuce"
+      }
+    },
+    {
+      "name": "architecture-lint",
+      "description": "Module-boundary linter with a ratchet baseline: fails CI only when the count of forbidden imports or singletons grows.",
+      "category": "development",
+      "homepage": "https://github.com/OrenSegal/sous",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/OrenSegal/sous.git",
+        "path": "plugins/architecture-lint"
+      }
+    },
+    {
+      "name": "codebase-audit",
+      "description": "Adversarial codebase audit against fourteen engineering fundamentals: routes lenses by detected stack, has serious findings challenged by a refuter, scores every fundamental and clusters findings by root cause, plus an untangle refactor.",
+      "category": "testing",
+      "homepage": "https://github.com/OrenSegal/codebase-audit",
+      "source": {
+        "source": "github",
+        "repo": "OrenSegal/codebase-audit"
+      }
+    },
+    {
+      "name": "signal-scout",
+      "description": "Turns a startup URL or product description into an evidence-backed shortlist of first customers, market segments, and companies worth pitching.",
+      "category": "research",
+      "homepage": "https://github.com/OrenSegal/signal-scout",
+      "source": {
+        "source": "github",
+        "repo": "OrenSegal/signal-scout"
+      }
+    },
+    {
+      "name": "podcast",
+      "description": "Mine podcasts (Apple Podcasts, RSS, YouTube, or by show name) into extracted findings, predictions, and a queryable corpus.",
+      "category": "research",
+      "homepage": "https://github.com/OrenSegal/signal-skills",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/OrenSegal/signal-skills.git",
+        "path": "plugins/podcast"
+      }
+    },
+    {
+      "name": "review-scout",
+      "description": "Mine app/store/web reviews into ranked findings, regressions, and feature-request clusters.",
+      "category": "research",
+      "homepage": "https://github.com/OrenSegal/signal-skills",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/OrenSegal/signal-skills.git",
+        "path": "plugins/review-scout"
+      }
+    },
+    {
+      "name": "ideation",
+      "description": "Turn podcast/review-scout findings into prioritized, cited build-next proposals.",
+      "category": "research",
+      "homepage": "https://github.com/OrenSegal/signal-skills",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/OrenSegal/signal-skills.git",
+        "path": "plugins/ideation"
+      }
+    },
+    {
+      "name": "signal-report",
+      "description": "Render ranked findings into a themed, shareable report.",
+      "category": "research",
+      "homepage": "https://github.com/OrenSegal/signal-skills",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/OrenSegal/signal-skills.git",
+        "path": "plugins/signal-report"
+      }
+    },
+    {
+      "name": "signal-outreach",
+      "description": "Turn a signal-scout prospect report into ready-to-send outreach sequences, content briefs, and BD pitches.",
+      "category": "research",
+      "homepage": "https://github.com/OrenSegal/signal-skills",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/OrenSegal/signal-skills.git",
+        "path": "plugins/signal-outreach"
+      }
+    },
+    {
+      "name": "visibility",
+      "description": "Ship it where builders look: get your MCP server, agent plugin, skill, SDK or API listed in the registries, marketplaces and package indexes developers and agents actually search.",
+      "category": "marketing",
+      "homepage": "https://github.com/OrenSegal/visibility",
+      "source": {
+        "source": "github",
+        "repo": "OrenSegal/visibility"
+      }
+    },
+    {
+      "name": "emil-design-swiftui",
+      "description": "Unofficial SwiftUI adaptation of Emil Kowalski's design-engineering and animation skills for native iOS apps. Credit for the design judgment is Emil's; he did not write, review or endorse this port.",
+      "category": "design",
+      "homepage": "https://github.com/OrenSegal/emil-design-swiftui",
+      "source": {
+        "source": "github",
+        "repo": "OrenSegal/emil-design-swiftui"
+      }
+    }
+  ]
+}
